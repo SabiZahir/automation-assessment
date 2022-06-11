@@ -6,7 +6,7 @@ Feature: Test LabCorp Apply for Job Functionality
   Scenario: Test Apply for QA Automation Job
     Given user is on the "https://www.labcorp.com" page
     When user clicks on career link
-    And user searches for "QA Test Automation Developer" job
+    And user searches for "Test Automation Developer" job
     And user selects and browses the position
     And and user verifies job specific details
 

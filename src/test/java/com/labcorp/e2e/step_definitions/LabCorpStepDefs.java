@@ -67,7 +67,14 @@ public class LabCorpStepDefs {
     public void user_selects_and_browses_the_position() {
         List<WebElement> jobs = driver.findElements(By.xpath("//div[@class='job-title']//span"));
         Assert.assertEquals(10, jobs.size());
-        jobs.get(0).click();
+        for(WebElement jobElement: jobs) {
+            String jobTitle = jobElement.getText();
+            System.out.println(jobTitle);
+            if (jobTitle.equalsIgnoreCase("QA Test Automation Developer")) {
+                jobElement.click();
+                break;
+            }
+        }
     }
 
     @When("and user verifies job specific details")
